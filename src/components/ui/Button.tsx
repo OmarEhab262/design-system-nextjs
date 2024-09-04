@@ -6,7 +6,7 @@ import { tailwindMerge } from "@/app/utils";
 const buttonVariants = cva(
   [
     "rounded-md",
-    "m-2",
+    "m-1",
     "transition-all",
     "duration-150",
     "ease-in-out",
@@ -14,19 +14,19 @@ const buttonVariants = cva(
     "items-center",
   ], // Common classes
   {
+    // bg-blue-600 text-white hover:bg-blue-700 dark:bg-primary dark:text-white dark:hover:bg-blue-800
     variants: {
       variant: {
-        primary:
-          "bg-blue-600 text-white hover:bg-blue-700 dark:bg-primary dark:text-white dark:hover:bg-blue-800",
+        primary: "bg-primary text-primary-foreground",
         destructive:
-          "bg-red-600 text-white hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600",
+          "bg-destructive text-white hover:bg-destructive/80 dark:bg-destructive dark:hover:bg-destructive/70",
         secondary:
-          "bg-gray-100 text-black hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 dark:hover:bg-secondary/70",
         outline:
-          "bg-transparent text-black border border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700",
+          "bg-transparent text-outline border border-outline hover:bg-outline/10 dark:hover:bg-outline/20",
         ghost:
-          "bg-transparent text-black hover:bg-gray-50 dark:text-white dark:hover:bg-gray-800",
-        link: "bg-transparent text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-500",
+          "bg-ghost/0 text-primary-foreground hover:bg-ghost/100 dark:hover:bg-ghost/30",
+        link: "bg-transparent text-link hover:underline dark:text-link dark:hover:text-link/80",
       },
 
       size: {

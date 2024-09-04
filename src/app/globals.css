@@ -2,22 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light Mode */
+/* layer utilities */
 
-:root {
-  --default-brand: 152.9 60% 52.9%;
-}
-
-/* Dark Mode */
-
-@media (prefers-color-scheme: dark) {
+@layer base {
+  /* Light Mode */
   :root {
-    --default-brand: 152.9 60% 52.9%;
+    --primary: 152.9 60% 52.9%;
+    --secondary-color: 200 65% 45%;
+    --outline-color: 210 25% 60%;
+    --ghost-color: 150 5% 95%;
+    --link-color: 220 80% 55%;
+    --destructive-color: 0 65% 50%;
   }
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Dark Mode */
+  .dark {
+    --primary: 152.9 60% 52.9%;
+    --secondary-color: 200 65% 30%;
+    --outline-color: 210 25% 40%;
+    --ghost-color: 150 5% 20%;
+    --link-color: 220 80% 70%;
+    --destructive-color: 0 65% 40%;
   }
 }

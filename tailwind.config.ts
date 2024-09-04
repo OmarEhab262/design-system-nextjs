@@ -11,12 +11,27 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "hsl(var(--default-brand)/.7)",
-          foreground: "red",
+          DEFAULT: "hsl(var(--primary) / 0.7)",
+          foreground: "hsl(var(--primary-foreground) / 0.7)",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary-color) / 0.7)",
+          foreground: "hsl(var(--secondary-foreground) / 0.7)",
+        },
+        outline: "hsl(var(--outline-color) / 1)",
+        ghost: "hsl(var(--ghost-color) / 1)",
+        link: {
+          DEFAULT: "hsl(var(--link-color) / 1)",
+          hover: "hsl(var(--link-hover-color) / 1)", // Optional hover color
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive-color) / 1)",
+          hover: "hsl(var(--destructive-color) / 0.8)", // Optional hover color
         },
       },
     },
   },
   plugins: [],
 };
+
 export default config;
