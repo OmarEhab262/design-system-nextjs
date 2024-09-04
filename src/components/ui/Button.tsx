@@ -17,17 +17,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-black text-white hover:bg-gray-800 dark:bg-primary dark:text-white dark:hover:bg-gray-200",
+          "bg-blue-600 text-white hover:bg-blue-700 dark:bg-primary dark:text-white dark:hover:bg-blue-800",
         destructive:
           "bg-red-600 text-white hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600",
         secondary:
-          "bg-gray-200 text-black hover:bg-gray-300 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700",
+          "bg-gray-100 text-black hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700",
         outline:
-          "bg-transparent text-black border border-gray-900 dark:border-gray-200  dark:text-white ",
+          "bg-transparent text-black border border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700",
         ghost:
-          "bg-transparent text-black hover:bg-gray-100 dark:text-white dark:bg-transparent dark:hover:bg-gray-800",
+          "bg-transparent text-black hover:bg-gray-50 dark:text-white dark:hover:bg-gray-800",
         link: "bg-transparent text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-500",
       },
+
       size: {
         xs: "px-2 text-xs h-6",
         sm: "px-4 text-sm h-8",
