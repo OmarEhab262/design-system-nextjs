@@ -1,4 +1,6 @@
-import ButtonUi from "@/components/ui/Button";
+import ButtonUi, { buttonVariants } from "@/components/ui/Button";
+import Link from "next/link";
+import { FaRegSun } from "react-icons/fa";
 const page = () => {
   return (
     <div className="p-5">
@@ -19,7 +21,9 @@ const page = () => {
         </ButtonUi>
         <hr className="mt-5" />
         <h3 className="text-center text-[30px] font-bold m-3">Variants</h3>
-        <ButtonUi variant="primary">SOLID </ButtonUi>
+        <ButtonUi variant="primary" rounded="none">
+          SOLID{" "}
+        </ButtonUi>
         <ButtonUi variant="destructive">DESTRUCTIVE</ButtonUi>
         <ButtonUi variant="secondary">SECONDARY</ButtonUi>
         <ButtonUi variant="outline">OUTLINE</ButtonUi>
@@ -33,7 +37,43 @@ const page = () => {
             full width
           </ButtonUi>
         </div>
+        <hr className="mt-5" />
+        <h3 className="text-center text-[30px] font-bold m-3 ">rounded</h3>
+        <div className="flex flex-wrap items-center">
+          <ButtonUi variant="secondary" rounded="none">
+            rounded none
+          </ButtonUi>
+          <ButtonUi variant="secondary" rounded="sm">
+            rounded sm
+          </ButtonUi>
+          <ButtonUi variant="secondary" rounded="md">
+            rounded md
+          </ButtonUi>
+          <ButtonUi variant="secondary" rounded="lg">
+            rounded lg
+          </ButtonUi>
+          <ButtonUi variant="secondary" rounded="full">
+            rounded full
+          </ButtonUi>
+          <ButtonUi variant="secondary">rounded default</ButtonUi>
+        </div>
+        <hr className="mt-5" />
+        <h3 className="text-center text-[30px] font-bold m-3 ">Icons</h3>
+        <div className="flex flex-wrap items-center justify-around">
+          <ButtonUi variant="secondary" startIcon={<FaRegSun />}>
+            Start icon
+          </ButtonUi>
+          <ButtonUi variant="secondary" endIcon={<FaRegSun />} disabled>
+            End icon
+          </ButtonUi>
+        </div>
       </div>
+      <Link
+        href="/products"
+        className={buttonVariants({ variant: "destructive", fullWidth: true })}
+      >
+        I'm Just A Link
+      </Link>
     </div>
   );
 };
