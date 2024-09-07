@@ -72,7 +72,7 @@ const page = () => {
         href="/products"
         className={buttonVariants({ variant: "destructive", fullWidth: true })}
       >
-        I'm Just A Link
+        Im Just A Link
       </Link>
     </div>
   );
